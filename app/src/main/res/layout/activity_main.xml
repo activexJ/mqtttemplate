@@ -9,8 +9,62 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.tekvillage.mqttapp.MainActivity">
 
+
+    <LinearLayout
+        android:id="@+id/subscribepanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:hint="Enter Topic"
+            android:id="@+id/topic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_gravity="bottom"/>
+        <Button
+            android:id="@+id/subscribebtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subscribe"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/subscribepanel"
+        android:id="@+id/publishpanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:hint="Enter message to publish"
+            android:id="@+id/message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:layout_gravity="bottom"/>
+        <Button
+            android:id="@+id/publishbtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Publish"
+            android:layout_weight="1"/>
+    </LinearLayout>
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:id="@+id/statuspanel"
+        android:layout_below="@id/publishpanel"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:text="Status"/>
+    <ScrollView
+        android:layout_below="@id/statuspanel"
+        android:id="@+id/dataarea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/logview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+    </ScrollView>
+
 </RelativeLayout>

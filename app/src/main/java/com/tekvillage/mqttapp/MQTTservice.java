@@ -450,9 +450,10 @@ public class MQTTservice extends Service
 					//build the pending intent that will start the appropriate activity
 					pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
 				}
+
 					
 				//build the notification
-				Builder notificationCompat = new Builder(context);
+				/*Builder notificationCompat = new Builder(context);
 				notificationCompat.setAutoCancel(true)  
 				        .setContentIntent(pendingIntent)
 				        .setContentText( message.toString())
@@ -461,7 +462,7 @@ public class MQTTservice extends Service
 				Notification notification = notificationCompat.build();		   
 				NotificationManager nm = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 				nm.notify(mid++, notification);
-
+				*/
 			}
 		}
 	}
